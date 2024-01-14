@@ -8,45 +8,47 @@
 </head>
 
 <body>
-<h3>電卓</h3>
 <!-- ここに記述していきましょう！ -->
-<div class="wrapper">
-  <h1 id="header">電卓</h1>
-  <div id="calculator">
-    <div>
-      <input readonly id="result" type="text" value="0">
-    </div>
-    <div class="first_row">
-      <button onclick="num_click(this.innerHTML)">7</button>
-      <button onclick="num_click(this.innerHTML)">8</button>
-      <button onclick="num_click(this.innerHTML)">9</button>
-      <button onclick="ope_click(this.innerHTML)">+</button>
-    </div>
-    <div class="second_row">
-      <button onclick="num_click(this.innerHTML)">4</button>
-      <button onclick="num_click(this.innerHTML)">5</button>
-      <button onclick="num_click(this.innerHTML)">6</button>
-      <button onclick="ope_click(this.innerHTML)">-</button>
-    </div>
-    <div class="third_row">
-      <button onclick="num_click(this.innerHTML)">1</button>
-      <button onclick="num_click(this.innerHTML)">2</button>
-      <button onclick="num_click(this.innerHTML)">3</button>
-      <button onclick="ope_click(this.innerHTML)">*</button>
-    </div>
-    <div class="fourth_row">
-      <button onclick="num_click(this.innerHTML)">0</button>
-      <button onclick="num_click(this.innerHTML)">00</button>
-      <button onclick="ope_click(this.innerHTML)">.</button>
-      <button onclick="ope_click(this.innerHTML)">/</button>
-    </div>
-    <div class="fifth_row">
-      <button onclick="c_click()">C</button>
-      <button onclick="equal_click()">=</button>
-    </div>
+<div class = "container">
+  <!-- 計算結果を出力する場所-->
+  <div id = "output_total" class="output ">0</div>
+<!-- 計算過程を出力する-->
+  <div id = "output_sub" class="output active">0</div>
+<!-- ボタンを配置する場所-->
+  <div class = 'input'>
+    <section class = 'row'>
+      <div id = "clear">C</div>
+      <div class = "num_bth" id="del">del</div>
+       <!-- 空欄用 -->
+      <div class = "num_bth blank"></div>
+      <div class = "num_bth cal" data-index-id= '/'>/</div>
+    </section>
+    <section class = 'row'>
+      <div class = "num_bth one_nine " data-index-id = 9 >9</div>
+      <div class = "num_bth one_nine " data-index-id = 8 >8</div>
+      <div class = "num_bth one_nine " data-index-id = 7 >7</div>
+      <div class = "num_bth cal" data-index-id = '*'>*</div>
+    </section>
+    <section class = 'row'>
+      <div class = "num_bth one_nine " data-index-id = 6 >6</div>
+      <div class = "num_bth one_nine " data-index-id = 5 >5</div>
+      <div class = "num_bth one_nine " data-index-id = 4 >4</div>
+      <div class = "num_bth cal" data-index-id = '-'>-</div>     
+    </section>
+    <section class = 'row'>
+      <div class = "num_bth one_nine " data-index-id = 3 >3</div>
+      <div class = "num_bth  one_nine" data-index-id = 2 >2</div>
+      <div class = "num_bth  one_nine" data-index-id = 1 >1</div>
+      <div class = "num_bth cal" data-index-id = '+'>+</div>
+    </section>
+    <section class = 'row'>
+      <div class = "num_bth" data-index-id = 00 >00</div>
+      <div class = "num_bth" id="zero" data-index-id = 0 >0</div>
+      <div class = "num_bth" id="point" data-index-id =.>.</div>
+      <div id = 'equal_btn'>=</div>       
+    </section>
   </div>
-</div>
-
-<script src="main.js"></script>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
